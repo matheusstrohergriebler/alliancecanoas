@@ -243,12 +243,22 @@ section{position:relative;padding:clamp(90px,13vw,180px) 0}
 @keyframes cueBounce{0%,100%{transform:translateY(0)}50%{transform:translateY(7px)}}
 @media(prefers-reduced-motion:reduce){.scrollcue-chevron{animation:none}}
 /* double-bezel visual */
-.about-visual{position:relative;aspect-ratio:4/5;border-radius:30px;padding:7px;background:var(--paper-2);border:1px solid var(--hair);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
-.about-visual .core{position:relative;width:100%;height:100%;border-radius:23px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
-.about-visual .core img{width:100%;height:100%;object-fit:cover;object-position:50% 70%;display:block}
-.about-visual .core img.img-fachada{object-position:80% 42%}
-.about-visual .floattag{position:absolute;left:18px;bottom:18px;padding:10px 16px;border-radius:14px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid var(--hair);font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft)}
-.about-visual .floattag b{color:var(--sage-deep);font-family:'Archivo Black'}
+.about-visual{position:relative;display:flex;flex-direction:column;gap:16px}
+.about-visual .av-photo{position:relative;border-radius:30px;padding:7px;background:var(--paper-2);border:1px solid var(--hair);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.about-visual .av-photo img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:23px;display:block;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.about-visual .av-photo img.img-fachada{object-position:50% 60%}
+.about-visual .av-map{position:relative;aspect-ratio:16/10;border-radius:30px;padding:7px;background:var(--paper-2);border:1px solid var(--hair);box-shadow:0 40px 80px -30px rgba(0,0,0,.9)}
+.about-visual .av-map .core{position:relative;width:100%;height:100%;border-radius:23px;overflow:hidden;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
+.about-visual .about-map{width:100%;height:100%;border:0;display:block;filter:grayscale(.25) contrast(1.02)}
+.about-visual .floattag-photo{position:absolute;left:18px;bottom:18px;padding:10px 16px;border-radius:14px;background:rgba(255,255,255,.9);backdrop-filter:blur(12px);border:1px solid var(--hair);font-size:.66rem;text-transform:uppercase;letter-spacing:.14em;color:var(--ink-soft)}
+.about-visual .floattag-photo b{color:var(--sage-deep);font-family:'Archivo Black'}
+.about-visual .av-map .floattag{position:absolute;left:18px;right:18px;bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 16px;border-radius:16px;background:rgba(255,255,255,.92);backdrop-filter:blur(12px);border:1px solid var(--hair);box-shadow:0 12px 30px -12px rgba(0,0,0,.4)}
+.about-visual .ft-addr{font-size:.66rem;text-transform:uppercase;letter-spacing:.13em;color:var(--ink-soft);line-height:1.5}
+.about-visual .ft-addr b{color:var(--sage-deep);font-family:'Archivo Black'}
+.about-visual .ft-addr span{display:block;text-transform:none;letter-spacing:0;font-size:.82rem;color:var(--muted);margin-top:3px}
+.about-visual .ft-dir{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:var(--ink);color:var(--paper);font-size:.74rem;font-weight:600;padding:10px 15px;border-radius:999px;text-decoration:none;transition:transform .3s var(--ease),background .3s}
+.about-visual .ft-dir svg{width:15px;height:15px}
+.about-visual .ft-dir:hover{transform:translateX(2px);background:var(--forest)}
 
 /* ---------- PROFESSOR ---------- */
 #professor{background:linear-gradient(180deg,var(--paper-3),var(--paper))}
@@ -508,6 +518,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
   .hero-actions{flex-direction:row;flex-wrap:wrap;align-items:center}
   .stats{margin-top:48px}
   .about,.cta-grid,.prog-grid{grid-template-columns:1fr;gap:40px}
+  .about-visual .av-map{aspect-ratio:auto;min-height:360px}
+  .about-visual .av-map .floattag{flex-direction:column;align-items:flex-start;gap:11px}
+  .about-visual .ft-dir{align-self:stretch;justify-content:center}
   .prof{grid-template-columns:1fr;gap:36px}
   .prof-photo{max-width:420px}
   .time-core{grid-template-columns:1fr;gap:28px}
@@ -610,10 +623,10 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
   <div class="wrap">
     <div class="about">
       <div class="about-copy rv">
-        <span class="eyebrow">A Arte Suave</span>
-        <h2>A melhor escola<br>de <b>Jiu Jitsu</b><br>do mundo</h2>
-        <p>"Ju" significa suavidade; "jutsu", arte. O <b>Jiu Jitsu</b> é a arte de usar técnica, alavancas e timing para que o menor domine o maior — força inteligente, não bruta.</p>
-        <p>A Alliance é pioneira na metodologia de aulas coletivas e a equipe mais vitoriosa da história. Em <b>Canoas</b>, levamos essa mesma escola a alunos de todas as idades, num ambiente que respira disciplina, respeito e comunidade.</p>
+        <span class="eyebrow">Onde treinar</span>
+        <h2>A Alliance<br>em <b>Canoas</b></h2>
+        <p>No coração do <b>Centro de Canoas</b> desde <b>2019</b>, a Alliance recebe alunos de todas as idades e níveis — do primeiro dia de treino ao competidor de alto rendimento. Um espaço que respira técnica, disciplina e comunidade.</p>
+        <p>Em <b>agosto de 2026</b>, a unidade ganha uma <b>reinauguração</b>: estrutura renovada, tatame ampliado e a mesma metodologia da equipe mais vitoriosa da história do Jiu Jitsu. As aulas seguem normalmente até lá — é só chegar.</p>
         <div class="quote">
           <span class="mark">"</span>
           <p>É no extremo onde as coisas extraordinárias acontecem.</p>
@@ -634,10 +647,19 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
         </div>
       </div>
       <div class="about-visual rv">
-        <div class="core">
-          <img src="asset_04.jpg" alt="Fachada da Alliance Jiu Jitsu Canoas" class="img-fachada">
+        <div class="av-photo">
+          <img src="asset_04.jpg" alt="Fachada da Alliance Jiu Jitsu Canoas — R. Brasil, 1206" class="img-fachada">
+          <div class="floattag floattag-photo">Nossa fachada · <b>Canoas</b></div>
         </div>
-        <div class="floattag">Nossa fachada · <b>Canoas</b></div>
+        <div class="av-map">
+          <div class="core">
+            <iframe class="about-map" src="https://maps.google.com/maps?q=R.%20Brasil%2C%201206%20-%20sala%20201%2C%20Centro%2C%20Canoas%20-%20RS%2C%2092310-150&z=16&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localizacao da Alliance Canoas"></iframe>
+          </div>
+          <div class="floattag">
+            <div class="ft-addr">Nossa sede · <b>Canoas/RS</b><span>R. Brasil, 1206 — sala 201, Centro</span></div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=R.%20Brasil%2C%201206%20-%20sala%20201%2C%20Centro%2C%20Canoas%20-%20RS%2C%2092310-150" target="_blank" rel="noopener" class="ft-dir">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
