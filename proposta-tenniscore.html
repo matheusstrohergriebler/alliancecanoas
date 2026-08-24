@@ -285,6 +285,15 @@ section{position:relative;padding:clamp(84px,12vw,160px) 0}
 .asset p{color:var(--muted);font-size:.85rem;font-weight:300}
 
 /* ---------- CENARIO ---------- */
+.cpa-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:18px}
+.cpa{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:22px 20px;transition:border-color .5s var(--ease)}
+.cpa.alvo{border-color:var(--volt-deep);background:linear-gradient(180deg,rgba(212,255,61,.07),transparent 60%)}
+.cpa .lbl{font-size:.6rem;text-transform:uppercase;letter-spacing:.18em;color:var(--muted-deep);font-weight:600;margin-bottom:12px}
+.cpa.alvo .lbl{color:var(--volt)}
+.cpa .cpv{font-family:'Archivo Black';font-size:1.5rem;letter-spacing:-.02em;margin-bottom:12px}
+.cpa .ln{display:flex;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--muted);font-weight:300;padding:5px 0}
+.cpa .ln b{color:var(--off-soft);font-weight:600;white-space:nowrap}
+.cpa .ln.res b{color:var(--volt)}
 .sim-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:22px}
 .sim-box{border:1px solid var(--hair);border-radius:22px;overflow:hidden;background:var(--card)}
 .sim-box.win{border-color:var(--volt-deep)}
@@ -356,6 +365,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   .combo-num{text-align:left}
   .extras{grid-template-columns:1fr 1fr}
   .names{grid-template-columns:repeat(3,1fr)}
+  .cpa-grid{grid-template-columns:1fr 1fr}
   .asset-row{grid-template-columns:1fr}
   .sim-2{grid-template-columns:1fr}
 }
@@ -372,6 +382,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   .stat{padding:22px 0;border-bottom:1px solid var(--hair)}
   .stat .lab{max-width:none}
   .ctx-grid,.steps,.deliv,.plans,.social-grid,.two-col,.extras,.steps-final,.sim-2,.asset-row{grid-template-columns:1fr}
+  .cpa-grid{grid-template-columns:1fr 1fr}
   .names{grid-template-columns:1fr 1fr}
   .steps{border-radius:20px}
   .tl-row{grid-template-columns:1fr;gap:10px;padding:22px 22px}
@@ -439,9 +450,9 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
     </h1>
 
     <p class="hero-lede">
-      <b>Tênis: O Guia Essencial</b> já tem o ativo mais difícil de construir — conteúdo validado e o aval dos maiores
-      tenistas do país. O que falta é a estrutura de venda: <b>página própria fora do marketplace</b>, oferta desenhada
-      para sustentar o custo de mídia e tráfego com leitura diária de CPA. Social media entra como módulo opcional.
+      <b>Tênis: O Guia Essencial</b> já tem o ativo mais difícil de construir — conteúdo validado, ticket que sustenta
+      mídia paga com folga e o aval dos maiores tenistas do país. O que falta é distribuição: <b>página própria fora do
+      marketplace</b> e uma operação de tráfego que não dependa do link na bio. Social media entra como módulo opcional.
     </p>
 
     <div class="hero-actions">
@@ -454,7 +465,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
     <div class="hero-meta">
       <div><b>Preparado para</b>Nico Ventre — TennisCore</div>
       <div><b>Por</b>Matheus Griebler — SG Assessoria</div>
-      <div><b>Produto</b>Tênis: O Guia Essencial — 98 páginas, R$ 57</div>
+      <div><b>Produto</b>Tênis: O Guia Essencial — 98 páginas, R$ 147</div>
       <div><b>Frentes</b>Página de vendas · Tráfego pago · Social (opcional)</div>
     </div>
 
@@ -520,8 +531,8 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
     <div class="sec-head rv">
       <span class="eyebrow">Diagnóstico</span>
       <h2>Três coisas travam a <b>escala</b> <em>hoje</em></h2>
-      <p>O produto está pronto e a autoridade está construída. O que impede o tráfego de rodar com lucro é estrutural —
-        e os três pontos abaixo precisam ser resolvidos na ordem em que aparecem.</p>
+      <p>O produto está pronto, a autoridade está construída e o ticket sustenta mídia paga. O que falta é
+        distribuição — e os três pontos abaixo precisam ser resolvidos na ordem em que aparecem.</p>
     </div>
 
     <div class="ctx-grid">
@@ -534,10 +545,10 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       </div>
       <div class="ctx rv">
         <div class="num">02</div>
-        <h3>R$ 57 não sustenta CPA de agência sozinho</h3>
-        <p>Descontada a taxa da plataforma, cada venda deixa cerca de R$ 50. Esse é o teto absoluto de custo por
-          venda — antes de pagar gestão. Sem elevar o valor médio do pedido, a operação vive no limite do
-          empate, por melhor que seja a campanha.</p>
+        <h3>A aquisição depende do link na bio</h3>
+        <p>Hoje o que traz venda é alcance orgânico do Instagram — canal que não escala por decisão, só por sorte de
+          entrega. Sem mídia paga, o faturamento fica preso ao tamanho da audiência que já existe, e cada mês começa
+          do zero. Não há máquina de aquisição, há divulgação.</p>
       </div>
       <div class="ctx rv">
         <div class="num">03</div>
@@ -648,8 +659,8 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
         <div class="deliv-item rv">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
           <h4>Estrutura de order bump</h4>
-          <p>Desenho e implementação de uma oferta complementar no checkout — o mecanismo que tira a operação do
-            limite do empate. Configurada na plataforma e testada junto com a página.</p>
+          <p>Desenho e implementação de uma oferta complementar no checkout — cerca de R$ 1.300 a mais por mês sem
+            gastar um real de mídia adicional. Configurada na plataforma e testada junto com a página.</p>
         </div>
         <div class="deliv-item rv">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
@@ -918,76 +929,113 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
 <section id="cenario">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">A conta do ticket de R$ 57</span>
-      <h2>Por que a <b>oferta</b> importa mais que a <em>campanha</em></h2>
-      <p>Os dois quadros abaixo usam exatamente a mesma verba, o mesmo custo por venda e o mesmo volume. A única
-        diferença é a estrutura de oferta. É esse desenho — não o tamanho da verba — que decide se o projeto escala
-        ou vive empatando.</p>
+      <span class="eyebrow">A conta do ticket de R$ 147</span>
+      <h2>A margem <b>já existe</b>. Falta <em>volume</em></h2>
+      <p>Descontada a taxa da plataforma, cada venda deixa cerca de <b style="color:var(--off-soft)">R$ 131</b>. Isso
+        significa que o produto aguenta pagar até R$ 131 por venda antes de empatar — enquanto a operação deve rodar
+        perto de R$ 50. É uma folga larga, e é ela que torna o tráfego pago viável aqui.</p>
     </div>
 
     <div class="sim-2">
       <div class="sim-box rv">
         <div class="sim-box-head">
-          <div class="lbl">Cenário A</div>
+          <div class="lbl">Cenário base</div>
           <h4>Só o ebook</h4>
-          <p>Venda única de R$ 57, como funciona hoje.</p>
+          <p>Venda única de R$ 147, com a página nova recebendo o tráfego.</p>
         </div>
         <div class="sim-row"><span class="k">Verba de mídia</span><span class="v">R$ 3.000</span></div>
-        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 22</span></div>
-        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 136</span></div>
-        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 57</span></div>
-        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 7.752</span></div>
-        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 903</span></div>
+        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 50</span></div>
+        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 60</span></div>
+        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 147</span></div>
+        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 8.820</span></div>
+        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 933</span></div>
         <div class="sim-row"><span class="k">Mídia + gestão</span><span class="v">− R$ 4.200</span></div>
-        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 2.649</span></div>
+        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 3.687</span></div>
       </div>
 
       <div class="sim-box win rv">
         <div class="sim-box-head">
-          <div class="lbl">Cenário B — com a estrutura proposta</div>
+          <div class="lbl">Com a estrutura de oferta proposta</div>
           <h4>Ebook + order bump + upsell</h4>
-          <p>Order bump de R$ 47 (25% de adesão) e upsell de R$ 197 (4%).</p>
+          <p>Order bump de R$ 47 (25% de adesão) e upsell de R$ 297 (4%).</p>
         </div>
         <div class="sim-row"><span class="k">Verba de mídia</span><span class="v">R$ 3.000</span></div>
-        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 22</span></div>
-        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 136</span></div>
-        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 76,63</span></div>
-        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 10.422</span></div>
-        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 1.168</span></div>
+        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 50</span></div>
+        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 60</span></div>
+        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 170,63</span></div>
+        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 10.238</span></div>
+        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 1.074</span></div>
         <div class="sim-row"><span class="k">Mídia + gestão</span><span class="v">− R$ 4.200</span></div>
-        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 5.054</span></div>
+        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 4.964</span></div>
       </div>
     </div>
 
-    <div class="two-col">
+    <div class="sec-head rv" style="margin:clamp(50px,6vw,80px) 0 0;max-width:640px">
+      <span class="eyebrow">Margem de segurança</span>
+      <h2 style="font-size:clamp(1.5rem,3vw,2.2rem)">E se o <b>CPA</b> vier pior?</h2>
+      <p style="margin-top:16px">Mesmo com o custo por venda 60% acima do alvo, a operação continua no positivo.
+        Essa é a diferença de trabalhar com um ticket de R$ 147 em vez de um produto de entrada.</p>
+    </div>
+
+    <div class="cpa-grid rv">
+      <div class="cpa">
+        <div class="lbl">Cenário otimista</div>
+        <div class="cpv">R$ 40 <span style="font-family:'Archivo';font-weight:300;font-size:.6rem;color:var(--muted);letter-spacing:.1em">POR VENDA</span></div>
+        <div class="ln"><span>Vendas</span><b>75</b></div>
+        <div class="ln"><span>Receita bruta</span><b>R$ 11.025</b></div>
+        <div class="ln res"><span>Sobra</span><b>R$ 5.659</b></div>
+      </div>
+      <div class="cpa alvo">
+        <div class="lbl">Alvo da operação</div>
+        <div class="cpv">R$ 50 <span style="font-family:'Archivo';font-weight:300;font-size:.6rem;color:var(--muted);letter-spacing:.1em">POR VENDA</span></div>
+        <div class="ln"><span>Vendas</span><b>60</b></div>
+        <div class="ln"><span>Receita bruta</span><b>R$ 8.820</b></div>
+        <div class="ln res"><span>Sobra</span><b>R$ 3.687</b></div>
+      </div>
+      <div class="cpa">
+        <div class="lbl">CPA ruim</div>
+        <div class="cpv">R$ 65 <span style="font-family:'Archivo';font-weight:300;font-size:.6rem;color:var(--muted);letter-spacing:.1em">POR VENDA</span></div>
+        <div class="ln"><span>Vendas</span><b>46</b></div>
+        <div class="ln"><span>Receita bruta</span><b>R$ 6.762</b></div>
+        <div class="ln res"><span>Sobra</span><b>R$ 1.847</b></div>
+      </div>
+      <div class="cpa">
+        <div class="lbl">Pior caso realista</div>
+        <div class="cpv">R$ 80 <span style="font-family:'Archivo';font-weight:300;font-size:.6rem;color:var(--muted);letter-spacing:.1em">POR VENDA</span></div>
+        <div class="ln"><span>Vendas</span><b>37</b></div>
+        <div class="ln"><span>Receita bruta</span><b>R$ 5.439</b></div>
+        <div class="ln res"><span>Sobra</span><b>R$ 664</b></div>
+      </div>
+    </div>
+
+    <div class="two-col" style="margin-top:22px">
       <div class="rv">
         <div class="sim-disc">
-          <b style="color:var(--off-soft)">O número que manda no projeto.</b><br>
-          Vendendo só o ebook, cada venda deixa cerca de <b style="color:var(--volt)">R$ 50</b> depois da taxa da
-          plataforma. Esse é o teto de custo por venda antes de pagar qualquer gestão — e é apertado para mídia paga.
-          Com order bump e upsell, o valor médio do pedido sobe para R$ 76,63 e o mesmo CPA passa a ter folga real.
-          Por isso a estrutura de oferta entrou no escopo da página, e não como adicional.
-        </div>
-        <div class="sim-disc" style="margin-top:14px">
           <b style="color:var(--off-soft)">Os dois primeiros meses são de calibragem.</b><br>
           É normal o CPA começar acima do alvo e cair conforme o pixel acumula conversões. Os quadros representam a
           operação já estabilizada, a partir do terceiro mês. Custo por venda varia com criativo, público e conversão
           real da página — por isso rastreamento e rotina de teste são parte do escopo, não um extra.
+        </div>
+        <div class="sim-disc" style="margin-top:14px">
+          <b style="color:var(--off-soft)">Order bump é upside, não salvação.</b><br>
+          Diferente de um produto de entrada, aqui a conta já fecha sem ele. A estrutura de oferta entra porque
+          custa pouco para implementar junto com a página e devolve cerca de R$ 1.300 por mês — mas o projeto não
+          depende dela para ser viável.
         </div>
       </div>
       <div class="rv">
         <div class="sim-disc">
           <b style="color:var(--off-soft)">Verba de mídia é separada.</b><br>
           O investimento em anúncios é pago diretamente às plataformas, no cartão do cliente, e não passa pela SG.
-          Recomendação de partida: <b style="color:var(--volt)">R$ 3.000 a R$ 5.000 por mês</b>. Abaixo de R$ 2.000
-          o volume de dados é insuficiente para otimizar com segurança.
+          Recomendação de partida: <b style="color:var(--volt)">R$ 3.000 a R$ 5.000 por mês</b>. Com esse ticket, a
+          escala é limitada pela verba, não pela margem — subir o investimento é decisão de apetite, não de risco.
         </div>
         <div class="sim-disc" style="margin-top:14px">
           <b style="color:var(--off-soft)">De onde vêm estes números.</b><br>
-          Ticket de R$ 57 e 98 páginas conforme a listagem pública do produto; taxa de plataforma estimada em 9,9%
-          mais R$ 1 por transação; CPA de R$ 22 como referência conservadora para infoproduto de ticket baixo com
-          criativo em rotina de teste. Confirmando o preço atual e a taxa real do contrato Hotmart, eu refaço os
-          dois quadros antes do aceite.
+          Ticket de R$ 147 e 98 páginas conforme o produto; taxa de plataforma estimada em 9,9% mais R$ 1 por
+          transação. O CPA de R$ 50 é referência conservadora para infoproduto de nicho com prova social forte —
+          e o quadro de margem de segurança mostra o que acontece se ele vier pior. Confirmando a taxa real do
+          contrato Hotmart, eu refaço os quadros antes do aceite.
         </div>
       </div>
     </div>
@@ -1007,7 +1055,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       <div class="note-card rv">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>Premissas do orçamento</h3>
         <ul>
-          <li>Produto: <b>Tênis: O Guia Essencial</b>, 98 páginas, ticket de R$ 57 conforme listagem pública. Preço diferente muda a conta da simulação.</li>
+          <li>Produto: <b>Tênis: O Guia Essencial</b>, 98 páginas, ticket de R$ 147. Preço diferente muda a conta da simulação.</li>
           <li>O <b>conteúdo do ebook já está pronto</b> — escrita, diagramação e revisão do material não fazem parte do escopo.</li>
           <li>Uma página de vendas principal, com <b>order bump incluso</b>. A página de upsell é orçada como adicional.</li>
           <li>Autorização de uso da imagem e do nome dos atletas para a página e para os anúncios é responsabilidade do cliente.</li>
