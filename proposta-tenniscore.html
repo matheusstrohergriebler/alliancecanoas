@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Proposta TEENIS CORE — SG Assessoria</title>
-<meta name="description" content="Proposta comercial SG Assessoria para o TEENIS CORE: página de vendas de alta conversão e gestão de tráfego pago para o ebook.">
+<title>Proposta TennisCore — SG Assessoria</title>
+<meta name="description" content="Proposta comercial SG Assessoria para o TennisCore: página de vendas e gestão de tráfego pago para o ebook Tênis: O Guia Essencial.">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -271,7 +271,28 @@ section{position:relative;padding:clamp(84px,12vw,160px) 0}
 .extra .v{font-family:'Archivo Black';font-size:1.15rem;color:var(--volt)}
 .extra .v small{font-family:'Archivo';font-weight:300;font-size:.66rem;color:var(--muted);text-transform:uppercase;letter-spacing:.1em;margin-left:5px}
 
+/* ---------- ATIVO / PROVA SOCIAL ---------- */
+#ativo{background:var(--ink)}
+.names{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:14px}
+.name-card{background:var(--card);border:1px solid var(--hair);border-radius:16px;padding:24px 16px;text-align:center;transition:border-color .5s var(--ease),transform .5s var(--ease)}
+.name-card:hover{border-color:var(--volt-deep);transform:translateY(-4px)}
+.name-card .n{font-family:'Archivo';font-weight:800;font-size:.92rem;text-transform:uppercase;letter-spacing:-.01em;line-height:1.15}
+.name-card .r{font-size:.64rem;color:var(--muted);margin-top:9px;text-transform:uppercase;letter-spacing:.1em;line-height:1.4}
+.asset-row{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
+.asset{background:var(--card);border:1px solid var(--hair);border-radius:18px;padding:26px 24px}
+.asset .big{font-family:'Archivo Black';font-size:2rem;line-height:1;color:var(--volt);letter-spacing:-.02em;margin-bottom:12px}
+.asset h4{font-size:.9rem;font-weight:800;text-transform:none;letter-spacing:0;margin-bottom:7px}
+.asset p{color:var(--muted);font-size:.85rem;font-weight:300}
+
 /* ---------- CENARIO ---------- */
+.sim-2{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:22px}
+.sim-box{border:1px solid var(--hair);border-radius:22px;overflow:hidden;background:var(--card)}
+.sim-box.win{border-color:var(--volt-deep)}
+.sim-box-head{padding:22px 26px;border-bottom:1px solid var(--hair)}
+.sim-box-head .lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.2em;color:var(--muted-deep);font-weight:600;margin-bottom:8px}
+.sim-box.win .sim-box-head .lbl{color:var(--volt)}
+.sim-box-head h4{font-size:1.15rem;font-weight:900;text-transform:uppercase;letter-spacing:-.01em}
+.sim-box-head p{color:var(--muted);font-size:.83rem;font-weight:300;margin-top:7px}
 #cenario{background:linear-gradient(180deg,var(--ink),var(--void))}
 .sim{display:grid;grid-template-columns:.9fr 1.1fr;gap:clamp(28px,4vw,60px);align-items:center}
 .sim-table{border:1px solid var(--hair);border-radius:22px;overflow:hidden}
@@ -334,6 +355,9 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   .combo-core{grid-template-columns:1fr;gap:24px}
   .combo-num{text-align:left}
   .extras{grid-template-columns:1fr 1fr}
+  .names{grid-template-columns:repeat(3,1fr)}
+  .asset-row{grid-template-columns:1fr}
+  .sim-2{grid-template-columns:1fr}
 }
 @media(max-width:440px){
   .nav{gap:10px;padding:9px 9px 9px 16px}
@@ -347,7 +371,8 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   .stats{grid-template-columns:1fr;gap:0}
   .stat{padding:22px 0;border-bottom:1px solid var(--hair)}
   .stat .lab{max-width:none}
-  .ctx-grid,.steps,.deliv,.plans,.social-grid,.two-col,.extras,.steps-final{grid-template-columns:1fr}
+  .ctx-grid,.steps,.deliv,.plans,.social-grid,.two-col,.extras,.steps-final,.sim-2,.asset-row{grid-template-columns:1fr}
+  .names{grid-template-columns:1fr 1fr}
   .steps{border-radius:20px}
   .tl-row{grid-template-columns:1fr;gap:10px;padding:22px 22px}
   .tl-owner{text-align:left}
@@ -375,7 +400,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   <nav class="nav">
     <a href="#home" class="logo-lockup"><span class="sg">SG</span><span class="as">Assessoria</span></a>
     <div class="nav-links">
-      <a href="#contexto">Contexto</a>
+      <a href="#contexto">Diagnóstico</a>
       <a href="#escopo">Escopo</a>
       <a href="#social">Social</a>
       <a href="#cronograma">Cronograma</a>
@@ -389,7 +414,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
 </div>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#contexto">Contexto</a>
+  <a href="#contexto">Diagnóstico</a>
   <a href="#escopo">Escopo</a>
   <a href="#social">Social Media</a>
   <a href="#cronograma">Cronograma</a>
@@ -409,14 +434,14 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
 
     <h1>
       <span class="ln"><span class="w-intro">Proposta de atendimento</span></span>
-      <span class="ln"><span class="w-bold">TEENIS</span></span>
+      <span class="ln"><span class="w-bold">TENNIS</span></span>
       <span class="ln"><span class="w-bold"><em>CORE</em></span></span>
     </h1>
 
     <p class="hero-lede">
-      Estrutura completa para tirar o ebook do papel e transformá-lo em <b>um canal de venda que roda sozinho</b>:
-      página de vendas construída para converter + gestão de tráfego pago com leitura diária de CPA e escala controlada.
-      Social media entra como módulo opcional.
+      <b>Tênis: O Guia Essencial</b> já tem o ativo mais difícil de construir — conteúdo validado e o aval dos maiores
+      tenistas do país. O que falta é a estrutura de venda: <b>página própria fora do marketplace</b>, oferta desenhada
+      para sustentar o custo de mídia e tráfego com leitura diária de CPA. Social media entra como módulo opcional.
     </p>
 
     <div class="hero-actions">
@@ -427,9 +452,9 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
     </div>
 
     <div class="hero-meta">
-      <div><b>Preparado para</b>Nico Ventre — TEENIS CORE</div>
+      <div><b>Preparado para</b>Nico Ventre — TennisCore</div>
       <div><b>Por</b>Matheus Griebler — SG Assessoria</div>
-      <div><b>Produto</b>Ebook — ticket médio R$ 147 a R$ 397</div>
+      <div><b>Produto</b>Tênis: O Guia Essencial — 98 páginas, R$ 57</div>
       <div><b>Frentes</b>Página de vendas · Tráfego pago · Social (opcional)</div>
     </div>
 
@@ -450,34 +475,76 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
   </div>
 </header>
 
+<!-- ATIVO -->
+<section id="ativo">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <span class="eyebrow">Ponto de partida</span>
+      <h2>O ativo já <b>existe</b> — e está <em>invisível</em></h2>
+      <p>A maior parte dos infoprodutos começa sem autoridade e precisa construí-la do zero. Aqui é o contrário: o
+        guia é assinado por uma equipe com mais de 25 anos de quadra e carrega o aval de cinco nomes que o público
+        de tênis reconhece na hora. Hoje essa credencial está enterrada numa página de marketplace.</p>
+    </div>
+
+    <div class="names rv">
+      <div class="name-card"><div class="n">Bruno Soares</div><div class="r">6× campeão de Grand Slam em duplas</div></div>
+      <div class="name-card"><div class="n">Thomaz Bellucci</div><div class="r">Ex-top 21 do mundo</div></div>
+      <div class="name-card"><div class="n">Thiago Monteiro</div><div class="r">Nº 1 do Brasil em simples</div></div>
+      <div class="name-card"><div class="n">André Sá</div><div class="r">Referência histórica das duplas</div></div>
+      <div class="name-card"><div class="n">Teliana Pereira</div><div class="r">Melhor tenista brasileira da era</div></div>
+    </div>
+
+    <div class="asset-row rv">
+      <div class="asset">
+        <div class="big">98</div>
+        <h4>Páginas de conteúdo</h4>
+        <p>78 páginas do guia mais 20 de bônus, cobrindo desde regras e equipamento até biomecânica, estratégia de simples e duplas e preparo mental.</p>
+      </div>
+      <div class="asset">
+        <div class="big">25+</div>
+        <h4>Anos de quadra na autoria</h4>
+        <p>Assinado por Mario Enrico Ventre, Yuri Radomsky, Alessandro Ventre e Tiago Leivas — especialistas com trajetória no esporte.</p>
+      </div>
+      <div class="asset">
+        <div class="big">5</div>
+        <h4>Atletas de elite endossando</h4>
+        <p>Prova social que a maioria dos concorrentes não tem e não consegue comprar. É o principal argumento de conversão da página.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CONTEXTO -->
 <section id="contexto">
   <div class="wrap">
     <div class="sec-head rv">
       <span class="eyebrow">Diagnóstico</span>
-      <h2>Onde o <b>projeto</b> trava <em>hoje</em></h2>
-      <p>Um ebook de ticket médio não vende por impulso: ele exige uma página que sustente o argumento até o final e uma
-        operação de mídia que aprenda rápido qual público paga barato. Sem esses dois pilares, verba vira custo.</p>
+      <h2>Três coisas travam a <b>escala</b> <em>hoje</em></h2>
+      <p>O produto está pronto e a autoridade está construída. O que impede o tráfego de rodar com lucro é estrutural —
+        e os três pontos abaixo precisam ser resolvidos na ordem em que aparecem.</p>
     </div>
 
     <div class="ctx-grid">
       <div class="ctx rv">
         <div class="num">01</div>
-        <h3>Produto pronto, canal inexistente</h3>
-        <p>O conteúdo já existe, mas não há um destino de venda próprio. Sem página, o tráfego não tem para onde ir —
-          e todo investimento em mídia depende de um link que converta.</p>
+        <h3>O destino é uma página de marketplace</h3>
+        <p>Hoje o link da bio leva a uma listagem da Hotmart: sem copy própria, sem os depoimentos dos atletas em
+          destaque, cercada de produtos concorrentes e sem pixel sob seu controle. É o pior lugar possível para
+          receber clique pago — não dá para otimizar o que não é seu.</p>
       </div>
       <div class="ctx rv">
         <div class="num">02</div>
-        <h3>Ticket médio exige convencimento</h3>
-        <p>Na faixa de R$ 147 a R$ 397 a decisão não é impulsiva. A página precisa entregar promessa, prova, quebra de
-          objeção e garantia — nessa ordem — ou o clique caro se perde na dobra.</p>
+        <h3>R$ 57 não sustenta CPA de agência sozinho</h3>
+        <p>Descontada a taxa da plataforma, cada venda deixa cerca de R$ 50. Esse é o teto absoluto de custo por
+          venda — antes de pagar gestão. Sem elevar o valor médio do pedido, a operação vive no limite do
+          empate, por melhor que seja a campanha.</p>
       </div>
       <div class="ctx rv">
         <div class="num">03</div>
-        <h3>Tráfego sem leitura vira desperdício</h3>
-        <p>Campanha de produto digital se ganha no CPA e na taxa de conversão da página, não no alcance. Sem
-          rastreamento correto e teste de criativo, não existe decisão — existe achismo.</p>
+        <h3>A prova social mais forte está escondida</h3>
+        <p>Bruno Soares, Bellucci, Monteiro, Sá e Teliana endossando o guia é o argumento que fecha a venda para
+          quem joga tênis. Numa página própria isso vira a dobra principal; num marketplace, vira uma linha de
+          descrição que ninguém lê.</p>
       </div>
     </div>
   </div>
@@ -497,8 +564,8 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       <div class="step">
         <div class="fase">Fase 01</div>
         <h3>Imersão &amp; oferta</h3>
-        <p>Reunião de kickoff, definição de público, mapeamento de dores, construção da promessa central, precificação
-          e desenho da estrutura de bônus e garantia.</p>
+        <p>Kickoff, definição de público e — o ponto mais importante deste projeto — desenho da estrutura de oferta
+          que eleva o valor médio do pedido: order bump, upsell e garantia.</p>
         <span class="prazo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Semana 1</span>
       </div>
       <div class="step">
@@ -541,10 +608,10 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       <div class="scope-aside rv">
         <span class="kicker">01</span>
         <h3>Página de <em>vendas</em></h3>
-        <p>Uma página única, construída do zero, com copy e estrutura desenhadas especificamente para um infoproduto
-          de ticket médio. Entrega pontual, com 30 dias de ajustes inclusos.</p>
+        <p>Um destino próprio para o tráfego, fora do marketplace, com os atletas na dobra principal e a oferta
+          estruturada para elevar o valor médio do pedido. Entrega pontual, com 30 dias de ajustes inclusos.</p>
         <div class="tagrow">
-          <span>Copywriting</span><span>Design</span><span>Desenvolvimento</span><span>Tracking</span><span>CRO</span>
+          <span>Copywriting</span><span>Design</span><span>Desenvolvimento</span><span>Order bump</span><span>Tracking</span><span>CRO</span>
         </div>
       </div>
       <div class="deliv">
@@ -577,6 +644,12 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
           <h4>Rastreamento de conversão</h4>
           <p>Meta Pixel com API de conversões, Google Tag e GA4, eventos de checkout e compra, e conferência de que
             cada venda aparece corretamente na plataforma de anúncio.</p>
+        </div>
+        <div class="deliv-item rv">
+          <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 6H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+          <h4>Estrutura de order bump</h4>
+          <p>Desenho e implementação de uma oferta complementar no checkout — o mecanismo que tira a operação do
+            limite do empate. Configurada na plataforma e testada junto com a página.</p>
         </div>
         <div class="deliv-item rv">
           <div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 11-3-6.7"/><path d="M21 4v5h-5"/></svg></div>
@@ -833,8 +906,8 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
         <div class="v">R$ 120 <small>por peça</small></div>
       </div>
       <div class="extra rv">
-        <h4>Página adicional</h4>
-        <p>Upsell, order bump, página de obrigado com oferta ou captura de e-mail para nutrição da base.</p>
+        <h4>Página de upsell</h4>
+        <p>Página da oferta seguinte ao checkout, ou página de captura de e-mail para nutrir quem não comprou de primeira.</p>
         <div class="v">R$ 800 <small>por página</small></div>
       </div>
     </div>
@@ -845,35 +918,76 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
 <section id="cenario">
   <div class="wrap">
     <div class="sec-head rv">
-      <span class="eyebrow">Simulação</span>
-      <h2>Como a <b>conta</b> fecha</h2>
-      <p>Cenário de referência construído com números conservadores de mercado para infoproduto de ticket médio.
-        Serve para dimensionar a verba — não é promessa de resultado.</p>
+      <span class="eyebrow">A conta do ticket de R$ 57</span>
+      <h2>Por que a <b>oferta</b> importa mais que a <em>campanha</em></h2>
+      <p>Os dois quadros abaixo usam exatamente a mesma verba, o mesmo custo por venda e o mesmo volume. A única
+        diferença é a estrutura de oferta. É esse desenho — não o tamanho da verba — que decide se o projeto escala
+        ou vive empatando.</p>
     </div>
 
-    <div class="sim">
-      <div class="sim-table rv">
-        <div class="sim-row"><span class="k">Ticket do ebook</span><span class="v">R$ 197</span></div>
-        <div class="sim-row"><span class="k">Verba de mídia mensal</span><span class="v">R$ 3.000</span></div>
-        <div class="sim-row"><span class="k">Custo por venda estimado</span><span class="v">R$ 55</span></div>
-        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 54</span></div>
-        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 10.638</span></div>
-        <div class="sim-row"><span class="k">Mídia + gestão</span><span class="v">R$ 4.200</span></div>
-        <div class="sim-row total"><span class="k">Retorno sobre o investimento</span><span class="v">2,5×</span></div>
+    <div class="sim-2">
+      <div class="sim-box rv">
+        <div class="sim-box-head">
+          <div class="lbl">Cenário A</div>
+          <h4>Só o ebook</h4>
+          <p>Venda única de R$ 57, como funciona hoje.</p>
+        </div>
+        <div class="sim-row"><span class="k">Verba de mídia</span><span class="v">R$ 3.000</span></div>
+        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 22</span></div>
+        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 136</span></div>
+        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 57</span></div>
+        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 7.752</span></div>
+        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 903</span></div>
+        <div class="sim-row"><span class="k">Mídia + gestão</span><span class="v">− R$ 4.200</span></div>
+        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 2.649</span></div>
+      </div>
+
+      <div class="sim-box win rv">
+        <div class="sim-box-head">
+          <div class="lbl">Cenário B — com a estrutura proposta</div>
+          <h4>Ebook + order bump + upsell</h4>
+          <p>Order bump de R$ 47 (25% de adesão) e upsell de R$ 197 (4%).</p>
+        </div>
+        <div class="sim-row"><span class="k">Verba de mídia</span><span class="v">R$ 3.000</span></div>
+        <div class="sim-row"><span class="k">Custo por venda</span><span class="v">R$ 22</span></div>
+        <div class="sim-row"><span class="k">Vendas no mês</span><span class="v">≈ 136</span></div>
+        <div class="sim-row"><span class="k">Valor médio do pedido</span><span class="v">R$ 76,63</span></div>
+        <div class="sim-row"><span class="k">Receita bruta</span><span class="v">R$ 10.422</span></div>
+        <div class="sim-row"><span class="k">Taxa da plataforma</span><span class="v">− R$ 1.168</span></div>
+        <div class="sim-row"><span class="k">Mídia + gestão</span><span class="v">− R$ 4.200</span></div>
+        <div class="sim-row total"><span class="k">Sobra no mês</span><span class="v">R$ 5.054</span></div>
+      </div>
+    </div>
+
+    <div class="two-col">
+      <div class="rv">
+        <div class="sim-disc">
+          <b style="color:var(--off-soft)">O número que manda no projeto.</b><br>
+          Vendendo só o ebook, cada venda deixa cerca de <b style="color:var(--volt)">R$ 50</b> depois da taxa da
+          plataforma. Esse é o teto de custo por venda antes de pagar qualquer gestão — e é apertado para mídia paga.
+          Com order bump e upsell, o valor médio do pedido sobe para R$ 76,63 e o mesmo CPA passa a ter folga real.
+          Por isso a estrutura de oferta entrou no escopo da página, e não como adicional.
+        </div>
+        <div class="sim-disc" style="margin-top:14px">
+          <b style="color:var(--off-soft)">Os dois primeiros meses são de calibragem.</b><br>
+          É normal o CPA começar acima do alvo e cair conforme o pixel acumula conversões. Os quadros representam a
+          operação já estabilizada, a partir do terceiro mês. Custo por venda varia com criativo, público e conversão
+          real da página — por isso rastreamento e rotina de teste são parte do escopo, não um extra.
+        </div>
       </div>
       <div class="rv">
         <div class="sim-disc">
-          <b style="color:var(--off-soft)">Leitura honesta deste quadro.</b><br>
-          Os dois primeiros meses são de calibragem: é normal o CPA começar acima do alvo e cair conforme o pixel
-          acumula conversões. A simulação acima representa a operação já estabilizada, a partir do terceiro mês.
-          Custo por venda varia com nicho, qualidade do criativo e conversão real da página — por isso a estrutura de
-          rastreamento e a rotina de teste são parte do escopo, e não um extra.
-        </div>
-        <div class="sim-disc" style="margin-top:14px">
           <b style="color:var(--off-soft)">Verba de mídia é separada.</b><br>
           O investimento em anúncios é pago diretamente às plataformas, no cartão do cliente, e não passa pela SG.
           Recomendação de partida: <b style="color:var(--volt)">R$ 3.000 a R$ 5.000 por mês</b>. Abaixo de R$ 2.000
           o volume de dados é insuficiente para otimizar com segurança.
+        </div>
+        <div class="sim-disc" style="margin-top:14px">
+          <b style="color:var(--off-soft)">De onde vêm estes números.</b><br>
+          Ticket de R$ 57 e 98 páginas conforme a listagem pública do produto; taxa de plataforma estimada em 9,9%
+          mais R$ 1 por transação; CPA de R$ 22 como referência conservadora para infoproduto de ticket baixo com
+          criativo em rotina de teste. Confirmando o preço atual e a taxa real do contrato Hotmart, eu refaço os
+          dois quadros antes do aceite.
         </div>
       </div>
     </div>
@@ -893,9 +1007,11 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       <div class="note-card rv">
         <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 16v-5M12 8h.01"/></svg>Premissas do orçamento</h3>
         <ul>
-          <li>Produto: <b>um ebook</b>, com ticket entre R$ 147 e R$ 397. Ticket ou formato diferentes mudam a estratégia e o valor.</li>
+          <li>Produto: <b>Tênis: O Guia Essencial</b>, 98 páginas, ticket de R$ 57 conforme listagem pública. Preço diferente muda a conta da simulação.</li>
           <li>O <b>conteúdo do ebook já está pronto</b> — escrita, diagramação e revisão do material não fazem parte do escopo.</li>
-          <li>Uma página de vendas principal. Upsell, order bump e página de captura são orçados como adicionais.</li>
+          <li>Uma página de vendas principal, com <b>order bump incluso</b>. A página de upsell é orçada como adicional.</li>
+          <li>Autorização de uso da imagem e do nome dos atletas para a página e para os anúncios é responsabilidade do cliente.</li>
+          <li>O produto <b>permanece na Hotmart</b> como plataforma de checkout e entrega; a página nova passa a ser o destino do tráfego.</li>
           <li>Plataforma de checkout contratada pelo cliente; a SG faz a integração e o teste, não a assinatura.</li>
           <li>Material de marca (logo, fotos, identidade) fornecido pelo cliente ou construído como adicional.</li>
           <li>Verba de mídia paga direto às plataformas, separada da mensalidade de gestão.</li>
@@ -923,7 +1039,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
     <div class="finalcta rv">
       <div class="finalcta-core">
         <span class="eyebrow center">Próximos passos</span>
-        <h2>Vamos colocar o<br><em>TEENIS CORE</em> para vender</h2>
+        <h2>Vamos colocar o<br><em>TennisCore</em> para vender</h2>
         <p>Três passos até a primeira campanha no ar. Se algum ponto desta proposta precisar de ajuste, é só me
           chamar que eu recalculo — a estrutura é modular.</p>
 
@@ -964,6 +1080,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       </div>
       <div class="foot-col">
         <h5>Proposta</h5>
+        <a href="#ativo">Ponto de partida</a>
         <a href="#contexto">Diagnóstico</a>
         <a href="#escopo">Escopo</a>
         <a href="#cronograma">Cronograma</a>
@@ -978,7 +1095,7 @@ footer{background:var(--ink);border-top:1px solid var(--hair);padding:clamp(56px
       </div>
     </div>
     <div class="foot-bottom">
-      <p>© 2026 SG Assessoria — Proposta TEENIS CORE. Documento confidencial.</p>
+      <p>© 2026 SG Assessoria — Proposta TennisCore. Documento confidencial.</p>
       <p>Preparado para Nico Ventre</p>
     </div>
   </div>
@@ -1013,7 +1130,7 @@ document.querySelectorAll('[data-magnetic]').forEach(el=>{
 // === CONFIG WHATSAPP — TROCAR PELO NÚMERO DO MATHEUS ANTES DE ENVIAR ===
 // O número abaixo é um placeholder herdado de outro projeto. Substituir por DDI+DDD+número.
 const WA_NUMBER='5551999999999';
-const WA_MSG='Olá, Matheus. Vi a proposta do TEENIS CORE e quero conversar sobre os próximos passos.';
+const WA_MSG='Olá, Matheus. Vi a proposta do TennisCore e quero conversar sobre os próximos passos.';
 const waLink=(msg)=>`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
 document.querySelectorAll('[data-wa]').forEach(a=>a.setAttribute('href',waLink(WA_MSG)));
 </script>
