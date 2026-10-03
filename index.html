@@ -5,6 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alliance Canoas — Jiu Jitsu</title>
 <meta name="description" content="Alliance Canoas — afiliada oficial da maior e mais vitoriosa equipe de Jiu Jitsu do mundo. Agende sua aula experimental gratuita.">
+<link rel="canonical" href="https://alliancecanoas.com.br/">
+<meta name="theme-color" content="#152E39">
+
+<!-- Favicon / ícones -->
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+
+<!-- Open Graph (WhatsApp / Facebook / Instagram) -->
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Alliance Canoas">
+<meta property="og:url" content="https://alliancecanoas.com.br/">
+<meta property="og:title" content="Alliance Canoas — Jiu Jitsu no Centro de Canoas/RS">
+<meta property="og:description" content="Afiliada oficial da maior e mais vitoriosa equipe de Jiu Jitsu do mundo. Agende sua aula experimental gratuita.">
+<meta property="og:image" content="https://alliancecanoas.com.br/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Fachada da Alliance Jiu Jitsu Canoas — R. Brasil, 1206">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alliance Canoas — Jiu Jitsu no Centro de Canoas/RS">
+<meta name="twitter:description" content="Afiliada oficial da maior e mais vitoriosa equipe de Jiu Jitsu do mundo. Agende sua aula experimental gratuita.">
+<meta name="twitter:image" content="https://alliancecanoas.com.br/og-image.jpg">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700;800;900&family=Archivo+Narrow:wght@400;500;600;700&family=Archivo+Black&display=swap" rel="stylesheet">
@@ -317,6 +343,9 @@ section{position:relative;padding:clamp(90px,13vw,180px) 0}
 .slot:hover{border-color:var(--sage);background:rgba(159,165,119,.1);transform:translateY(-2px)}
 .slot.empty{opacity:.35}
 .slot.empty .t{color:var(--muted-deep)}
+.slot.kids{gap:10px;border-color:rgba(21,46,57,.22);background:linear-gradient(180deg,var(--paper-2),var(--paper-3))}
+.slot.kids:hover{border-color:var(--forest);background:rgba(21,46,57,.07)}
+.slot .tag{font-family:'Archivo';font-weight:700;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:var(--paper);background:var(--forest);padding:4px 8px;border-radius:6px;line-height:1}
 .hor-foot{display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between;margin-top:24px;padding:22px 26px;border-radius:20px;background:var(--paper-2);border:1px solid var(--hair)}
 .hor-foot .open{display:flex;gap:30px;flex-wrap:wrap}
 .hor-foot .open div{font-size:.86rem;color:var(--muted);font-weight:300}
@@ -402,7 +431,7 @@ section{position:relative;padding:clamp(90px,13vw,180px) 0}
 .plans-title b::after{content:"";position:absolute;left:0;bottom:.06em;width:100%;height:.09em;background:var(--yellow);border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .9s var(--ease) .6s}
 .sec-head.in .plans-title b::after{transform:scaleX(1)}
 #planos{background:var(--paper)}
-.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.plans{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:stretch}
 .plan{position:relative;border-radius:30px;padding:7px;background:var(--paper-2);border:1px solid var(--hair);transition:transform .6s var(--ease),border-color .6s var(--ease);display:flex}
 .plan:hover{transform:translateY(-8px)}
 .plan .core{border-radius:23px;padding:38px 34px;display:flex;flex-direction:column;width:100%;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
@@ -415,6 +444,7 @@ section{position:relative;padding:clamp(90px,13vw,180px) 0}
 .plan .price .v{font-family:'Archivo Black';font-size:2.8rem;letter-spacing:-.02em}
 .plan .price .c{font-size:1rem;color:var(--muted);font-weight:400}
 .plan .price .per{font-size:.85rem;color:var(--muted);font-weight:300}
+.price .cents{font-family:'Archivo Black';font-size:1.35rem;letter-spacing:-.02em}
 .plan .pdesc{color:var(--muted);font-size:.9rem;margin-bottom:28px;font-weight:300}
 .plan ul{list-style:none;margin-bottom:30px;flex:1}
 .plan li{display:flex;gap:12px;align-items:flex-start;padding:11px 0;border-bottom:1px solid var(--hair);color:var(--muted);font-size:.92rem;font-weight:300}
@@ -501,6 +531,7 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
 @media(max-width:1024px){
   .virt-bento{grid-template-columns:1fr 1fr}
   .stats{grid-template-columns:repeat(3,1fr)}
+  .plans{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:860px){
   .nav-links,.nav-cta{display:none}
@@ -780,37 +811,51 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
     </div>
     <div class="plans">
       <div class="plan rv"><div class="core">
-        <div class="tag">Mensal</div><h3>Start</h3>
-        <div class="price"><span class="c">R$</span><span class="v">199</span><span class="per">/mês</span></div>
-        <div class="pdesc">Para quem está começando agora.</div>
+        <div class="tag">Avulso</div><h3>Mensal</h3>
+        <div class="price"><span class="c">R$</span><span class="v">449</span><span class="cents">,90</span><span class="per">/mês</span></div>
+        <div class="pdesc">Sem fidelidade, máxima flexibilidade.</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>2x por semana</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Turmas para iniciantes</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Treino ilimitado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Gi + No Gi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Acesso a todas as turmas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Sistema de graduação</li>
+        </ul>
+        <a data-wa target="_blank" rel="noopener" class="plan-cta outline">Quero esse <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
+      </div></div>
+      <div class="plan rv"><div class="core">
+        <div class="tag">Assinatura</div><h3>Recorrente</h3>
+        <div class="price"><span class="c">R$</span><span class="v">329</span><span class="cents">,90</span><span class="per">/mês</span></div>
+        <div class="pdesc">Cobrança recorrente no cartão de crédito.</div>
+        <ul>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Treino ilimitado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Gi + No Gi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Acesso a todas as turmas</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Sistema de graduação</li>
         </ul>
         <a data-wa target="_blank" rel="noopener" class="plan-cta outline">Quero esse <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div></div>
       <div class="plan hot rv"><div class="core">
         <span class="badge">Mais escolhido</span>
-        <div class="tag">Mensal</div><h3>Full</h3>
-        <div class="price"><span class="c">R$</span><span class="v">299</span><span class="per">/mês</span></div>
-        <div class="pdesc">Treino livre, evolução completa.</div>
+        <div class="tag">6 meses</div><h3>Semestral</h3>
+        <div class="price"><span class="c">R$</span><span class="v">299</span><span class="cents">,90</span><span class="per">/mês</span></div>
+        <div class="pdesc">6x no cartão de crédito ou à vista com 5% de desconto.</div>
         <ul>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Treino ilimitado</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Gi + No Gi</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Acesso a todas as turmas</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Suporte de competição</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Sistema de graduação</li>
         </ul>
         <a data-wa target="_blank" rel="noopener" class="plan-cta solid">Começar agora <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div></div>
       <div class="plan rv"><div class="core">
-        <div class="tag">Anual</div><h3>Elite</h3>
-        <div class="price"><span class="c">R$</span><span class="v">249</span><span class="per">/mês</span></div>
-        <div class="pdesc">Plano anual, o melhor custo.</div>
+        <div class="tag">12 meses</div><h3>Anual</h3>
+        <div class="price"><span class="c">R$</span><span class="v">279</span><span class="cents">,90</span><span class="per">/mês</span></div>
+        <div class="pdesc">12x no cartão de crédito ou à vista com 5% de desconto.</div>
         <ul>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Tudo do plano Full</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Kimono Alliance de brinde</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Aula particular mensal</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Treino ilimitado</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Gi + No Gi</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Acesso a todas as turmas</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M5 13l4 4L19 7"/></svg>Sistema de graduação</li>
         </ul>
         <a data-wa target="_blank" rel="noopener" class="plan-cta outline">Quero esse <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span></a>
       </div></div>
@@ -833,8 +878,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
           <div class="day">Seg</div>
           <div class="slots">
             <span class="slot"><span class="t">12:00</span></span>
-            <span class="slot"><span class="t">19:00</span></span>
-            <span class="slot"><span class="t">20:00</span></span>
+            <span class="slot kids"><span class="t">18:15</span><span class="tag">Kids</span></span>
+            <span class="slot"><span class="t">19:15</span></span>
+            <span class="slot"><span class="t">20:15</span></span>
           </div>
         </div>
         <div class="hor-row">
@@ -850,8 +896,9 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
           <div class="day">Qua</div>
           <div class="slots">
             <span class="slot"><span class="t">12:00</span></span>
-            <span class="slot"><span class="t">19:00</span></span>
-            <span class="slot"><span class="t">20:00</span></span>
+            <span class="slot kids"><span class="t">18:15</span><span class="tag">Kids</span></span>
+            <span class="slot"><span class="t">19:15</span></span>
+            <span class="slot"><span class="t">20:15</span></span>
           </div>
         </div>
         <div class="hor-row">
@@ -871,6 +918,10 @@ footer{background:var(--paper-2);border-top:1px solid var(--hair);padding:clamp(
           </div>
         </div>
       </div>
+    </div>
+    <div class="hor-legend rv">
+      <span><i style="background:var(--sage)"></i> Turmas adulto</span>
+      <span><i style="background:var(--forest)"></i> Turmas Kids: segundas e quartas, 18:15</span>
     </div>
   </div>
 </section>

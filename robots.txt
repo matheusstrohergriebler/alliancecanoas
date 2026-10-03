@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alliancecanoas.com.br/sitemap.xml
